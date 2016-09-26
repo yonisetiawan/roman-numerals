@@ -1,8 +1,5 @@
 function to_roman_old(n) {
   // your code here
-  // // var romawi = [ "I", "V", "X", "L", "C", "D", "M"];
-  // // var moderen = [ 1, 5, 10, 50, 100, 500, 1000];
-  // var tampung = [];
   var result = ""
   if(n>=1000){
     var nstring = n.toString()
@@ -104,13 +101,6 @@ function to_roman_old(n) {
     to_roman_old(n)
   }
   return result
-    // if(n % (moderen[moderen.length - 1]) != 0){
-    //   tampung.push(moderen[moderen.length - 1]);
-    //   n  -= moderen[moderen.length - 1];
-    //   console.log(n);
-    //   console.log(tampung);
-    // }
-
   }
 
 function to_roman(n) {
@@ -125,7 +115,7 @@ function to_roman(n) {
     }
     n %= 1000
     result += a
-    to_roman_old(n)
+    to_roman(n)
   }
   if(n>=500 && n<1000){
     var nstring = n.toString()
@@ -136,7 +126,7 @@ function to_roman(n) {
     }
     n %= 500
     result += b
-    to_roman_old(n)
+    to_roman(n)
   }
   if(n>=400 && n<500){
     var nstring = n.toString()
@@ -147,7 +137,7 @@ function to_roman(n) {
     }
     n %= 400
     result += bc
-    to_roman_old(n)
+    to_roman(n)
   }
   if(n>=100 && n<400){
     var nstring = n.toString()
@@ -158,7 +148,7 @@ function to_roman(n) {
     }
     n %= 100
     result += c
-    to_roman_old(n)
+    to_roman(n)
   }
   if(n>=50 && n<100){
     var nstring = n.toString()
@@ -169,7 +159,7 @@ function to_roman(n) {
     }
     n %= 50
     result += d
-    to_roman_old(n)
+    to_roman(n)
   }
   if(n>=40 && n<50){
     var nstring = n.toString()
@@ -180,7 +170,7 @@ function to_roman(n) {
     }
     n %= 40
     result += de
-    to_roman_old(n)
+    to_roman(n)
   }
   if(n>=10 && n<50){
     var nstring = n.toString()
@@ -191,7 +181,7 @@ function to_roman(n) {
     }
     n %= 10
     result += e
-    to_roman_old(n)
+    to_roman(n)
   }
   if(n>=9 && n<10){
     var nstring = n.toString()
@@ -202,7 +192,7 @@ function to_roman(n) {
     }
     n %= 9
     result += ef
-    to_roman_old(n)
+    to_roman(n)
   }
   if(n>=5 && n<9){
     var nstring = n.toString()
@@ -213,7 +203,7 @@ function to_roman(n) {
     }
     n %= 5
     result += f
-    to_roman_old(n)
+    to_roman(n)
   }
   if(n>=4 && n<5){
     var nstring = n.toString()
@@ -224,7 +214,7 @@ function to_roman(n) {
     }
     n %= 4
     result += fg
-    to_roman_old(n)
+    to_roman(n)
   }
   if(n>=1 && n<4){
     var nstring = n.toString()
@@ -235,7 +225,7 @@ function to_roman(n) {
     }
     n %= 1
     result += g
-    to_roman_old(n)
+    to_roman(n)
   }
   return result
 }
