@@ -45,7 +45,7 @@ function to_roman(n) {
     //updating n values with n % number[i]
     n = n%number[i];
   }
-  //return result
+  //return resul
   return result;
 
 }
