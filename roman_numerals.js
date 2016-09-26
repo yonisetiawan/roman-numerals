@@ -1,9 +1,32 @@
 function to_roman_old(n) {
   // your code here
+  var romans = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'V', 'I'];
+  var decimals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 5, 1];
+  var result = '';
+
+  for(var i = 0 ; i < romans.length ; i++){
+    while(n >= decimals[i]){
+      result += romans[i];
+      n -= decimals[i];
+    }
+  }
+  return result;
 }
+
 
 function to_roman(n) {
   // your implementation code here
+  var romans = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+  var decimals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4,  1];
+  var result = '';
+
+  for(var i = 0 ; i < romans.length ; i++){
+    while(n >= decimals[i]){
+      result += romans[i];
+      n -= decimals[i];
+    }
+  }
+  return result;
 }
 
 // Drive code
