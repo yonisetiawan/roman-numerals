@@ -1,9 +1,40 @@
 function to_roman_old(n) {
-  // your code here
+  var angka = String(+n).split("");
+  var rom = [
+    "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
+    "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC",
+    "", "I", "II", "III", "IIII", "V", "VI", "VII", "VIII", "VIIII"
+  ];
+  var hasil = "",
+    i = 3;
+
+  while (i--) {
+    // console.log("sebelum: " + hasil);
+    hasil = (rom[+angka.pop() + (i * 10)] || "") + hasil;
+    // console.lˀˀog("sebelum: " + hasil);
+  }
+  return Array(+angka.join("") + 1).join("M") + hasil;
 }
 
 function to_roman(n) {
   // your implementation code here
+  var angka = String(+n).split("");
+  var rom = [
+    "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
+    "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC",
+    "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"
+  ];
+  var hasil = "",
+    i = 3;
+
+  while (i--) {
+    // console.log("sebelum: " + hasil);
+    hasil = (rom[+angka.pop() + (i * 10)] || "") + hasil;
+    // console.lˀˀog("sebelum: " + hasil);
+  }
+  return Array(+angka.join("") + 1).join("M") + hasil;
+
+
 }
 
 // Drive code
