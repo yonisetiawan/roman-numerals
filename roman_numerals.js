@@ -1,5 +1,20 @@
 function to_roman_old(n) {
   // your code here
+  var roman = ["M","CM","D","CD","C","XC","L","XL","X","VIIII","V","IIII","I"];
+  var number = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
+
+  if(n>4999 || n<=0){
+    return "Masukkan Nilai Antara 1 sd 4999"
+  }else{
+    var hasil = "";
+    for (var i = 0; i < roman.length; i++) {
+        while(n>=number[i]){
+            n -= number[i]
+            hasil += roman[i]
+        }
+    }
+    return hasil;
+  }
 }
 
 function to_roman(n) {
